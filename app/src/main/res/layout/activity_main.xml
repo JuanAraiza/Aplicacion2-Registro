@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical"
+
+    tools:context="com.smasite.aplicacion2.MainActivity">
+
+    <android.support.design.widget.TextInputLayout
+        android:layout_marginLeft="@dimen/margen"
+        android:layout_marginRight="@dimen/margen"
+        android:layout_marginTop="@dimen/margen"
+        android:id="@+id/etNombre_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <EditText
+            android:id="@+id/etNombre"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/size_text"
+            android:hint="@string/nombre_completo"/>
+    </android.support.design.widget.TextInputLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/margen"
+        android:layout_marginRight="@dimen/margen"
+        android:layout_marginTop="@dimen/margen"
+        android:orientation="horizontal">
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/height_btn"
+                android:textSize="@dimen/size_text_btn"
+                android:text="@string/btn_date_pick"
+                android:textColor="@color/icons"
+                android:onClick="showDatePickerDialog"
+                android:background="@color/colorAccent"
+                android:id="@+id/btnDatePicker"
+                android:padding="@dimen/padding"
+                />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/tvFechaNacimiento"
+                    android:hint=""
+                    android:text=""
+                    android:textSize="@dimen/size_text"
+                    android:padding="@dimen/padding"
+                    />
+    </LinearLayout>
+    <android.support.design.widget.TextInputLayout
+        android:id="@+id/etTelefono_layout"
+        android:layout_marginLeft="@dimen/margen"
+        android:layout_marginRight="@dimen/margen"
+        android:layout_marginTop="@dimen/margen"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <EditText
+            android:id="@+id/etTelefono"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/telefono"
+            android:textSize="@dimen/size_text"
+            android:inputType="phone"/>
+    </android.support.design.widget.TextInputLayout>
+
+    <android.support.design.widget.TextInputLayout
+        android:id="@+id/etMail_layout"
+        android:layout_marginLeft="@dimen/margen"
+        android:layout_marginRight="@dimen/margen"
+        android:layout_marginTop="@dimen/margen"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <EditText
+            android:id="@+id/etEmail"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/email"
+            android:textSize="@dimen/size_text"
+            android:inputType="textEmailAddress"/>
+    </android.support.design.widget.TextInputLayout>
+
+    <android.support.design.widget.TextInputLayout
+        android:id="@+id/etDescripcion_layout"
+        android:layout_marginLeft="@dimen/margen"
+        android:layout_marginRight="@dimen/margen"
+        android:layout_marginTop="@dimen/margen"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <EditText
+            android:id="@+id/etDescripcion"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/descripcion"
+            android:textSize="@dimen/size_text"
+            android:inputType="textMultiLine" />
+    </android.support.design.widget.TextInputLayout>
+
+    <LinearLayout android:id="@+id/llSiguiente"
+        android:orientation="horizontal"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:gravity="bottom">
+        <Button
+            android:id="@+id/btnSiguiente"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:onClick="confirmar"
+            android:background="@color/colorAccent"
+            android:text="@string/btn_siguiente"
+            android:textColor="@color/icons"
+            android:textSize="@dimen/size_text" />
+    </LinearLayout>
+</LinearLayout>
